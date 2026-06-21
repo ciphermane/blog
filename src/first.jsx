@@ -1,15 +1,17 @@
-import "./First.css";
+import "./first.css";
 
 function First({ post }) {
   return (
     <div className="card">
-      <img src={post.imgUrl} alt="post" />
+      <img src={post.imgUrl} alt={post.title} className="card-img" />
 
-      <h2>{post.title}</h2>
+      <div className="card-content">
+        <h2>{post.title}</h2>
 
-      <p>{post.body}</p>
+        <p>{post.body}</p>
 
-      <h4>Written by: {post.author}</h4>
+        <h4>Author: {post.author}</h4>
+      </div>
     </div>
   );
 }
